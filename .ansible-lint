@@ -1,0 +1,28 @@
+---
+# .ansible-lint
+
+profile: production # min, basic, moderate,safety, shared, production
+
+# Allows dumping of results in SARIF format
+# sarif_file: result.sarif
+
+# exclude_paths included in this file are parsed relative to this file's location
+# and not relative to the CWD of execution. CLI arguments passed to the --exclude
+# option are parsed relative to the CWD of execution.
+exclude_paths:
+  - tp1/
+  - set_ssh_key.yml
+  - playbook_examples/
+# parseable: true
+# quiet: true
+# strict: true
+# verbosity: 1
+
+var_naming_pattern: "^[a-z_][a-z0-9_]*$"
+
+# skip_list:
+#   - risky-file-permissions
+
+warn_list:
+  - yaml[truthy]
+  - risky-file-permissions
